@@ -1,0 +1,13 @@
+--- makeboot.c	2007-06-18 15:32:18.000000000 +0200
++++ makeboot.c	2007-06-20 15:29:02.014773000 +0200
+@@ -339,6 +339,10 @@
+ 			best = node;
+ 		}
+ 	}
++	if (best) {
++		blogger("service %s", best->name);
++		best->status = T_RUNNING;
++	}
+ 	return best;
+ }
+ 
