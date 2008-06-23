@@ -1,4 +1,5 @@
 Summary:	Start runlevel scripts in parallel
+Summary(pl.UTF-8):	Równoległe uruchamianie skryptów startowych
 Name:		startpar
 Version:	0.50
 Release:	0.1
@@ -18,6 +19,15 @@ default is full parallelism. An argument to all of the scripts can be
 provided with the -a option. Processes block by pending I/O will
 weighting by the factor 800. To change this factor the option -i can
 be used to specify an other value.
+
+%description -l pl.UTF-8
+startpar służy do równoległego uruchamiania wielu skryptów startowych
+dla danego poziomu działania systemu. Stopień równoległości dla
+jednego procesora można ustawić opcją -p, domyślna jest pełne
+zrównoleglenie. Za pomocą opcji -a można przekazać argument do
+wszystkich skryptów. Procesy blokowane przez oczekiwanie na we/wy są
+uwzględniane z wagą 800; można zmienić ten współczynnik za pomocą
+opcji -i.
 
 %prep
 %setup -q
